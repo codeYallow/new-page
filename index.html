@@ -1,97 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Learning bootstrap v5 with sass</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-   <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-<body>
-<!-- ////////////////////////////////////////////////////////////////////////////////////////
-                               START SECTION 1 - THE NAVBAR SECTION  
-/////////////////////////////////////////////////////////////////////////////////////////////-->
-<nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="images/logo.png" alt="logo image">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">faq</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">contact</a>
-          </li>
-        </ul>
-        <button type="button" class="rounded-pill btn-rounded">
-          +1 728365413
-          <span>
-            <i class="fas fa-phone-alt"></i>
-          </span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bootstrap and sass</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/vendors/glightbox/css/glightbox.min.css"
+    />
+  </head>
+  <body>
+    <!-- start the navbar section -->
+    <nav
+      class="
+        navbar navbar-expand-lg navbar-dark
+        bg-primary
+        menu
+        shadow
+        fixed-top
+      "
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/images/logo.png" alt="logo image" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
-      </div>
-    </div>
-  </nav>
-
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////
-                            START SECTION 2 - THE INTRO SECTION  
-/////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-<section id="home" class="intro-section">
-  <div class="container">
-    <div class="row align-items-center text-white">
-      <!-- START THE CONTENT FOR THE INTRO  -->
-      <div class="col-md-6 intros text-start">
-        <h1 class="display-2">
-          <span class="display-2--intro">Hey!, I'm Patrick</span>
-          <span class="display-2--description lh-base">
-            this is a multi-purpose responsive layout created with bootstrap v5. 
-            (here your can place your description text)
-          </span>
-        </h1>
-        <button type="button" class="rounded-pill btn-rounded">Get in Touch
-          <span><i class="fas fa-arrow-right"></i></span>
-        </button>
-      </div>
-      <!-- START THE CONTENT FOR THE VIDEO -->
-      <div class="col-md-6 intros text-end">
-        <div class="video-box">
-          <img src="images/arts/intro-section-illustration.png" alt="video illutration" class="img-fluid">
-          <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
-            <span>
-              <i class="fas fa-play-circle"></i>
-            </span>
-            <span class="border-animation border-animation--border-1"></span>
-            <span class="border-animation border-animation--border-2"></span>
-          </a>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavAltMarkup"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">faq</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">contact</a>
+            </li>
+          </ul>
+          <button type="button" class="rounded-pill btn-rounded">
+            0997661714 <span><i class="fas fa-phone-alt"></i></span>
+          </button>
         </div>
       </div>
-    </div>
-  </div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-</section>
-
-<!-- //////////////////////////////////////////////////////////////////////////////////////////////
-                             START SECTION 3 - THE CAMPANIES SECTION  
-////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    </nav>
+    <!-- start the intro section-->
+    <section id="home" class="intro-section">
+      <div class="container">
+        <div class="row align-items-center text-white">
+          <!-- start the content for the intro -->
+          <div class="col-md-6 intros">
+            <h1 class="display-2">
+              <span class="display-2--intro">Hey!, i'm Yazan</span>
+              <span class="display-2--description lh-base"
+                >this is a multi-purpose responsive layout
+                 (here your can place your description text)</span
+              >
+            </h1>
+            <button type="button" class="rounded-pill btn-rounded"> <a target="_blank" href="https://www.facebook.com/yazan.melsy/" style="text-decoration: none;">
+              Get in touch <span><i class="fas fa-arrow-right"></i></span></a>
+            </button>
+          </div>
+          <!-- start the content for the video -->
+          <div class="col-md-6 intros text-end">
+            <div class="video-box">
+              <img
+                class="img-fluid"
+                src="images/arts/intro-section-illustration.png"
+                alt="video illustration"
+              />
+              <a
+                href="#"
+                class="
+                  glightbox
+                  position-absolute
+                  top-50
+                  start-50
+                  translate-middle
+                "
+              >
+                <span><i class="fas fa-play-circle"></i></span>
+                <span
+                  class="border-animation border-animation--border-1"
+                ></span>
+                <span
+                  class="border-animation border-animation--border-2"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,32L26.7,69.3C53.3,107,107,181,160,224C213.3,267,267,277,320,250.7C373.3,224,427,160,480,149.3C533.3,139,587,181,640,186.7C693.3,192,747,160,800,122.7C853.3,85,907,43,960,37.3C1013.3,32,1067,64,1120,80C1173.3,96,1227,96,1280,101.3C1333.3,107,1387,117,1413,122.7L1440,128L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- end the intro -->
+    <!-- start the campanies section -->
 
   <section id="campanies" class="campanies">
     <div class="container">
       <div class="row text-center">
         <h4 class="fw-bold lead mb-3">Trusted by campanies like</h4>
-        <div class="heading-line mb-5"></div>
+        <div class="heading-line mb-5 "></div>
       </div>
     </div>
     <!-- START THE CAMPANIES CONTENT  -->
+ <section id="companies" class="companies">
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-lg-2">
@@ -637,12 +686,12 @@
       <!-- CONTENT FOR THE MOBILE NUMBER  -->
       <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
         <div class="contact-box__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
-            <path d="M15 7a2 2 0 0 1 2 2" />
-            <path d="M15 3a6 6 0 0 1 6 6" />
-          </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                <path d="M15 7a2 2 0 0 1 2 2" />
+                <path d="M15 3a6 6 0 0 1 6 6" />
+              </svg>
         </div>
         <div class="contact-box__info">
           <a href="#" class="contact-box__info--title">+1 728365413</a>
@@ -652,13 +701,13 @@
       <!-- CONTENT FOR EMAIL  -->
       <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
         <div class="contact-box__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-opened" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <polyline points="3 9 12 15 21 9 12 3 3 9" />
-            <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
-            <line x1="3" y1="19" x2="9" y2="13" />
-            <line x1="15" y1="13" x2="21" y2="19" />
-          </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-opened" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <polyline points="3 9 12 15 21 9 12 3 3 9" />
+                <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+                <line x1="3" y1="19" x2="9" y2="13" 
+                <line x1="15" y1="13" x2="21" y2="19" />
+              </svg>
         </div>
         <div class="contact-box__info">
           <a href="#" class="contact-box__info--title">info@company.com</a>
@@ -668,14 +717,14 @@
       <!-- CONTENT FOR LOCATION  -->
       <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
         <div class="contact-box__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <line x1="18" y1="6" x2="18" y2="6.01" />
-            <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
-            <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
-            <line x1="9" y1="4" x2="9" y2="17" />
-            <line x1="15" y1="15" x2="15" y2="20" />
-          </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2"  viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <line x1="18" y1="6" x2="18" y2="6.01" />
+                <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+                <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+                <line x1="9" y1="4" x2="9" y2="17" />
+                <line x1="15" y1="15" x2="15" y2="20" />
+              </svg>
         </div>
         <div class="contact-box__info">
           <a href="#" class="contact-box__info--title">New York, USA</a>
@@ -764,22 +813,20 @@
 <a href="#" class="shadow btn-primary rounded-circle back-to-top">
   <i class="fas fa-chevron-up"></i>
 </a>
-
-
-
-   
-    <script src="/assets/vendors/js/glightbox.min.js"></script>
-
+    <script src="/assets/vendors/glightbox/js/glightbox.min.js"></script>
     <script type="text/javascript">
       const lightbox = GLightbox({
-        'href': 'https://www.youtube.com/watch?v=J9lS14nM1xg',
-        'type': 'video',
-        'source': 'youtube', //vimeo, youtube or local
-        'width': 900,
-        'autoPlayVideos': 'true',
-});
-    
+        href: "https://youtu.be/f52mI1YHp-k",
+        type: "video",
+        source: "youtube", //vimeo, youtube or local
+        width: 900,
+        autoPlayVideos: true,
+      });
     </script>
-     <script src="assets/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
